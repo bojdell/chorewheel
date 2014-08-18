@@ -1,0 +1,61 @@
+
+@keyframes rot {
+	from {
+		transform: rotate(0deg)
+				   translate(0px) 
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(300px) 
+		           rotate(-360deg);
+	}
+}
+
+@-webkit-keyframes rot {
+	0% {
+		transform: rotate(0deg)
+				   translate(0px) 
+		           rotate(0deg);
+	}
+	50% {
+		transform: rotate(180deg)
+				   translate(-150px) 
+		           rotate(-180deg);
+		           background: red;
+	}
+	100% {
+		transform: rotate(360deg)
+		           translate(0px) 
+		           rotate(-360deg);
+	}
+}
+
+@-webkit-keyframes wheel-rot {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.animate-spin {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 500px;
+	left: 500px;
+	margin: -20px;
+	/*font-size: 100px;*/
+	animation: rot 3s 1 linear;
+    -webkit-animation: rot 3s 1 linear;
+}
+
+.spin-wheel {
+	-webkit-animation: wheel-rot 3s 1 linear;
+}
+
+h1:hover {
+    background: yellow;
+  }
